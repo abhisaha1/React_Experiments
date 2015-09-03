@@ -3,10 +3,7 @@ var React = require('react');
 var Header = React.createClass({
 
 	componentDidMount: function() {
-		vwoInit();
-		// $.get('http://ajaxtown.com/playground/data.php', function(data){
-			
-		// })
+
 	},
 	render: function() {
 
@@ -19,8 +16,8 @@ var Header = React.createClass({
 		            <div className="row">
 		                <div className="col-lg-12">
 		                    <div className="intro-message">
-		                        <h1 id="title">Landing Page</h1>
-		                        <h3>A Template by Start Bootstrap</h3>
+		                        <h1 id="title">Ajaxtown</h1>
+		                        <h3>By Abhishek Saha</h3>
 		                        <hr className="intro-divider" />
 		                        <ul className="list-inline intro-social-buttons">
 		                            <li>

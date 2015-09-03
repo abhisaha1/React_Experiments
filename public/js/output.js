@@ -2,18 +2,8 @@
 var React = require('react');
 var Router = require('react-router');
 var routes = require('./config/routes');
-//var RoutesAction = Router.RoutesAction;
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var HistoryJsLocation = require('react-router-historyjs-location');
-//     Router.run(routes, HistoryJsLocation, function (Handler,state) {
-//         React.render(<Handler/>, document.body);
-//     });
-// });
-
 
 Router.run(routes, Router.HistoryLocation, function(Root,state){
-
 	var deepestRouteName = state.routes[state.routes.length - 1].handler;
 	console.log(deepestRouteName.displayName);
 	React.render(React.createElement(Root, null),document.getElementById('app'));
@@ -169,10 +159,7 @@ var React = require('react');
 var Header = React.createClass({displayName: "Header",
 
 	componentDidMount: function() {
-		vwoInit();
-		// $.get('http://ajaxtown.com/playground/data.php', function(data){
-			
-		// })
+
 	},
 	render: function() {
 
@@ -185,8 +172,8 @@ var Header = React.createClass({displayName: "Header",
 		            React.createElement("div", {className: "row"}, 
 		                React.createElement("div", {className: "col-lg-12"}, 
 		                    React.createElement("div", {className: "intro-message"}, 
-		                        React.createElement("h1", {id: "title"}, "Landing Page"), 
-		                        React.createElement("h3", null, "A Template by Start Bootstrap"), 
+		                        React.createElement("h1", {id: "title"}, "Ajaxtown"), 
+		                        React.createElement("h3", null, "By Abhishek Saha"), 
 		                        React.createElement("hr", {className: "intro-divider"}), 
 		                        React.createElement("ul", {className: "list-inline intro-social-buttons"}, 
 		                            React.createElement("li", null, 
@@ -267,16 +254,13 @@ var About = require('../views/About');
 var Nav = React.createClass({displayName: "Nav",
 
 	componentDidMount: function() {
-		history.onpushstate = function(state) {
-    		// callback here
-    		console.log('changed',state);
-		}
+		
 	},
 	render: function() {
 
 		return (
 
-		    React.createElement("nav", {className: "navbar navbar-default navbar-fixed-top topnav", role: "navigation"}, 
+		    React.createElement("nav", {className: "navbar navbar-inverse navbar-fixed-top topnav", role: "navigation"}, 
 		        React.createElement("div", {className: "container topnav"}, 
 		            React.createElement("div", {className: "navbar-header"}, 
 		                React.createElement("button", {type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1"}, 
@@ -293,10 +277,10 @@ var Nav = React.createClass({displayName: "Nav",
 		                    	React.createElement(Link, {to: "about"}, "About")
 		                    ), 
 		                    React.createElement("li", null, 
-		                        React.createElement("a", {href: "#services"}, "Services")
+		                        React.createElement("a", {href: "#services"}, "Projects")
 		                    ), 
 		                    React.createElement("li", null, 
-		                        React.createElement("a", {href: "#contact"}, "Contact")
+		                        React.createElement("a", {href: "#contact"}, "Contact Me")
 		                    )
 		                )
 		            )

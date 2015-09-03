@@ -7,16 +7,13 @@ var About = require('../views/About');
 var Nav = React.createClass({
 
 	componentDidMount: function() {
-		history.onpushstate = function(state) {
-    		// callback here
-    		console.log('changed',state);
-		}
+		
 	},
 	render: function() {
 
 		return (
 
-		    <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+		    <nav className="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
 		        <div className="container topnav">
 		            <div className="navbar-header">
 		                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,10 +30,10 @@ var Nav = React.createClass({
 		                    	<Link to="about" >About</Link>
 		                    </li>
 		                    <li>
-		                        <a href="#services">Services</a>
+		                        <a href="#services">Projects</a>
 		                    </li>
 		                    <li>
-		                        <a href="#contact">Contact</a>
+		                        <a href="#contact">Contact Me</a>
 		                    </li>
 		                </ul>
 		            </div>
