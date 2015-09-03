@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Start Visual Website Optimizer Synchronous Code -->
+<script type='text/javascript'>
+var _vis_opt_account_id = 6352;
+var _vis_opt_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+document.write('<s' + 'cript src="' + _vis_opt_protocol +
+'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a='+_vis_opt_account_id+'&url='
++encodeURIComponent(document.URL)+'&random='+Math.random()+'" type="text/javascript">' + '<\/s' + 'cript>');
+</script>
+
+<script type='text/javascript'>
+if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write('<s' + 'cript src="' + _vis_opt_protocol +
+'d5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">' + '<\/s' + 'cript>'); }
+// if your site already has jQuery 1.4.2, replace vis_opt.js with vis_opt_no_jquery.js above
+</script>
+
+<script type='text/javascript'>
+if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function") {
+        _vis_opt_top_initialize(); vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); });
+}
+</script>
+<!-- End Visual Website Optimizer Synchronous Code -->
+
+<script type= "text/javascript">
+    
+    function script(sScriptSrc, oCallback) {
+        var oHead = document.getElementsByTagName('head')[0];
+        var oScript = document.createElement('script');
+        oScript.type = 'text/javascript';
+        oScript.src = sScriptSrc;
+        // most browsers
+        oScript.onload = oCallback;
+        // IE 6 & 7
+        oScript.onreadystatechange = function() {
+            if (this.readyState == 'complete') {
+                oCallback();
+            }
+        }
+        oHead.appendChild(oScript);
+    }
+
+</script>
+</head>
+<body>
+    <div id="app"> <%- html %> </div>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+    <!-- <script type="text/javascript" src="js/output.js"></script> -->
+
+    <script type="text/javascript">
+
+        script('js/output.js', function() {
+            if(typeof vwoInit == 'function') {
+                //vwoInit();
+            }
+        });
+
+    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
